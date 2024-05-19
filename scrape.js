@@ -2,6 +2,8 @@ const puppeteer = require('puppeteer');
 require("dotenv").config();
 const EMAIL = process.env.EMAIL;
 const PASS = process.env.PASS;
+console.log(EMAIL);
+console.log(PASS);
 
 // console.log(process.env.EMAIL,process.env.PASS)
 const scrape = async(res) =>{
