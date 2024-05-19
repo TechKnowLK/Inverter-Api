@@ -41,6 +41,7 @@ const scrape = async(res) =>{
     const data = await page.evaluate(() => {
         // Fetch the first element with class "#station"
         const quote = document.querySelector("#station");
+        console.log("elakiri");
     
         // Fetch the sub-elements from the previously fetched quote element
         // Get the displayed text and return it (`.innerText`)
@@ -48,6 +49,7 @@ const scrape = async(res) =>{
         const current_power = quote.querySelector(" div:nth-child(1) > div.main.af > div.top-info > div > div:nth-child(1) > div > div > div.item1 > span:nth-child(1)").innerText;
         const monthly_yield = quote.querySelector(" div:nth-child(1) > div.main.af > div.top-info > div > div:nth-child(3) > div > div > div.item1 > span:nth-child(1)").innerText;
         const result = {current_power,daily_yield,monthly_yield}
+        console.log("elakiri123");
     
         return result ;
       });
